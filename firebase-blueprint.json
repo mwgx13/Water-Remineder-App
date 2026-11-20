@@ -1,0 +1,137 @@
+{
+  "entities": {
+    "UserHydrationProfile": {
+      "title": "User Hydration Profile",
+      "description": "Stores a user's personalized hydration goal, preferred unit, quick-add preset volumes, and daily active hours.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Firebase Auth UID of the profile owner."
+        },
+        "displayName": {
+          "type": "string",
+          "description": "User's display name shown in the sanctuary greeting."
+        },
+        "dailyGoalMl": {
+          "type": "integer",
+          "description": "Daily hydration target in milliliters (500 to 10000)."
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["ML", "OZ"],
+          "description": "Preferred display measurement unit."
+        },
+        "quickPresetSmallMl": {
+          "type": "integer",
+          "description": "First quick-add droplet volume in mL."
+        },
+        "quickPresetMediumMl": {
+          "type": "integer",
+          "description": "Second quick-add droplet volume in mL."
+        },
+        "quickPresetLargeMl": {
+          "type": "integer",
+          "description": "Third quick-add droplet volume in mL."
+        },
+        "wakeHour": {
+          "type": "integer",
+          "description": "Start hour of active hydration window (0-23)."
+        },
+        "sleepHour": {
+          "type": "integer",
+          "description": "End hour of active hydration window (0-23)."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp set via FieldValue.serverTimestamp() at profile creation."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp set via FieldValue.serverTimestamp() on every update."
+        }
+      },
+      "required": [
+        "userId",
+        "displayName",
+        "dailyGoalMl",
+        "unit",
+        "quickPresetSmallMl",
+        "quickPresetMediumMl",
+        "quickPresetLargeMl",
+        "wakeHour",
+        "sleepHour",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "HydrationLog": {
+      "title": "Hydration Log",
+      "description": "Individual beverage intake entry logged by a user on a specific calendar day.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Firebase Auth UID of the log owner."
+        },
+        "amountMl": {
+          "type": "integer",
+          "description": "Raw consumed liquid volume in milliliters (1 to 5000)."
+        },
+        "effectiveMl": {
+          "type": "integer",
+          "description": "Hydration-factor adjusted volume in milliliters (1 to 6000)."
+        },
+        "beverageType": {
+          "type": "string",
+          "enum": ["WATER", "SPARKLING", "HERBAL_TEA", "GREEN_TEA", "ELECTROLYTES", "COFFEE"],
+          "description": "Beverage category."
+        },
+        "dayKey": {
+          "type": "string",
+          "description": "Local calendar day key in YYYY-MM-DD format."
+        },
+        "note": {
+          "type": "string",
+          "description": "Optional short personal note (max 140 chars)."
+        },
+        "loggedAtMillis": {
+          "type": "integer",
+          "description": "Client epoch timestamp in milliseconds when the drink was logged."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp set via FieldValue.serverTimestamp() at creation."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp set via FieldValue.serverTimestamp() on update."
+        }
+      },
+      "required": [
+        "userId",
+        "amountMl",
+        "effectiveMl",
+        "beverageType",
+        "dayKey",
+        "loggedAtMillis",
+        "createdAt",
+        "updatedAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserHydrationProfile" },
+      "description": "Per-user hydration preferences and daily goal configuration."
+    },
+    "/users/{userId}/intakeLogs/{logId}": {
+      "schema": { "$ref": "#/entities/HydrationLog" },
+      "description": "Per-user beverage intake logs scoped under the owner's user document."
+    }
+  }
+}

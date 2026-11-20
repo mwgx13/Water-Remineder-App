@@ -1,0 +1,6 @@
+{
+  "name": "Hydro Fluidity",
+  "description": "An atmospheric, glassmorphic personal hydration and daily wellness tracker.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,233 @@
+---
+name: Hydro Fluidity
+colors:
+  surface: '#061423'
+  surface-dim: '#061423'
+  surface-bright: '#2d3a4b'
+  surface-container-lowest: '#020f1e'
+  surface-container-low: '#0f1c2c'
+  surface-container: '#132030'
+  surface-container-high: '#1e2b3b'
+  surface-container-highest: '#283646'
+  on-surface: '#d6e4f9'
+  on-surface-variant: '#bcc9ce'
+  inverse-surface: '#d6e4f9'
+  inverse-on-surface: '#243142'
+  outline: '#869398'
+  outline-variant: '#3d494d'
+  surface-tint: '#4cd6fb'
+  primary: '#4cd6fb'
+  on-primary: '#003642'
+  primary-container: '#00b4d8'
+  on-primary-container: '#00414f'
+  inverse-primary: '#00677d'
+  secondary: '#83d3e1'
+  on-secondary: '#00363d'
+  secondary-container: '#006b78'
+  on-secondary-container: '#99e9f8'
+  tertiary: '#b0c8eb'
+  on-tertiary: '#19324d'
+  tertiary-container: '#8fa7c8'
+  on-tertiary-container: '#253c58'
+  error: '#ffb4ab'
+  on-error: '#690005'
+  error-container: '#93000a'
+  on-error-container: '#ffdad6'
+  primary-fixed: '#b3ebff'
+  primary-fixed-dim: '#4cd6fb'
+  on-primary-fixed: '#001f27'
+  on-primary-fixed-variant: '#004e5f'
+  secondary-fixed: '#9feffe'
+  secondary-fixed-dim: '#83d3e1'
+  on-secondary-fixed: '#001f24'
+  on-secondary-fixed-variant: '#004f59'
+  tertiary-fixed: '#d2e4ff'
+  tertiary-fixed-dim: '#b0c8eb'
+  on-tertiary-fixed: '#001c37'
+  on-tertiary-fixed-variant: '#314865'
+  background: '#061423'
+  on-background: '#d6e4f9'
+  surface-variant: '#283646'
+typography:
+  display-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 48px
+    fontWeight: '700'
+    lineHeight: 56px
+    letterSpacing: -0.03em
+  display-lg-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 38px
+    fontWeight: '700'
+    lineHeight: 46px
+    letterSpacing: -0.02em
+  headline-xl:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 32px
+    fontWeight: '700'
+    lineHeight: 40px
+    letterSpacing: -0.02em
+  headline-xl-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 28px
+    fontWeight: '700'
+    lineHeight: 36px
+    letterSpacing: -0.01em
+  headline-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 20px
+    fontWeight: '600'
+    lineHeight: 28px
+  headline-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 16px
+    fontWeight: '600'
+    lineHeight: 24px
+  body-xl:
+    fontFamily: Inter
+    fontSize: 18px
+    fontWeight: '400'
+    lineHeight: 28px
+  body-lg:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 24px
+  body-md:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+  body-sm:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+  label-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 14px
+    fontWeight: '600'
+    lineHeight: 20px
+    letterSpacing: 0.02em
+  label-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: 16px
+    letterSpacing: 0.04em
+  label-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 10px
+    fontWeight: '700'
+    lineHeight: 14px
+    letterSpacing: 0.06em
+rounded:
+  sm: 0.5rem
+  DEFAULT: 1rem
+  md: 1.5rem
+  lg: 2rem
+  xl: 3rem
+  full: 9999px
+spacing:
+  gutter: 1rem
+  gutter-sm: 0.75rem
+  margin: 1.25rem
+  margin-sm: 1rem
+  space-2xs: 0.25rem
+  space-xs: 0.5rem
+  space-sm: 0.75rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2rem
+  space-2xl: 3rem
+---
+
+## Brand & Style
+
+This design system establishes an atmospheric, fluid digital sanctuary focused on personal hydration and daily wellness. Rejecting clinical or strictly utilitarian health monitors, the aesthetic merges organic liquid properties with state-of-the-art mobile glassmorphism. It creates a serene, frictionless, and luminous sanctuary that elevates the repetitive habit of drinking water into a restorative personal ritual.
+
+Targeting modern digital citizens who prioritize mindfulness, performance, and refined aesthetics, the UI balances calming negative space with kinetic fluid elements. Soft volumetric light shifts, translucent panels, and liquid glow dynamics offer tactile gratification with every registered milliliter. The visual direction rests on high-end glassmorphism paired with organic minimalism: multi-plane frosted glass interfaces layered over deep abyssal oceanic gradients, framed by ultra-smooth rounded geometry.
+
+## Colors
+
+The color palette captures the shifting spectrum of light moving through water. Rooted in deep abyssal tones, the system creates depth before introducing crystalline, luminous highlights.
+
+- **Primary (`#00B4D8`)**: Oceanic Cyan. Represents active hydration, fluid progress meters, actionable triggers, and glowing state indicators.
+- **Secondary (`#90E0EF`)**: Crystalline Aqua. Applied to high-contrast iconography, shimmering card outlines, secondary actions, and ambient reflections.
+- **Tertiary (`#0A2540`)**: Abyssal Indigo. Used for structural backdrops, bottom sheets, and resting state surfaces.
+- **Neutral (`#051322`)**: Midnight Trench. The grounding canvas underpinning all translucent elements to prevent visual clipping and ensure maximum contrast under bright screen conditions.
+
+### Surface and Glass Tokens
+- **Background Base**: Fluid linear gradient flowing from `#0A2540` at `0%` through `#07192C` at `55%` down to `#051322` at `100%`, punctuated by ambient radial glows of `#00B4D8` at `12%` opacity.
+- **Glass Fill**: `rgba(255, 255, 255, 0.08)` for primary structural cards; `rgba(255, 255, 255, 0.15)` for elevated interactive controls.
+- **Glass Stroke**: `1px solid rgba(255, 255, 255, 0.28)` along top and left edges; softening to `rgba(255, 255, 255, 0.08)` along bottom and right edges to simulate directional downlight refraction.
+
+## Typography
+
+Typography combines the structural precision of **Inter** with the geometric warmth and open apertures of **Plus Jakarta Sans**. 
+
+- **Display & Headlines (Plus Jakarta Sans)**: Delivers expressive, rounded legibility for metrics, volume progress readouts (e.g., `2,450 / 3,000 mL`), and dynamic onboarding prompts. Tight negative tracking creates density and visual impact within compact viewport layouts.
+- **Body & Data Content (Inter)**: Anchors daily log records, hydration tips, unit switches, and contextual health advice with clean vertical metrics and neutral, low-friction readability against frosted backdrops.
+- **Labels & Micro-copy (Plus Jakarta Sans)**: Slight positive letter-spacing (`0.02em` to `0.06em`) maintains legibility across smaller chip indicators, timestamp metadata, and bottom navigation labels.
+
+## Layout & Spacing
+
+Designed strictly around mobile viewports, the layout relies on a fluid single-column model structured across an internal 4-column sub-grid with an absolute vertical rhythm scaled in multiples of 4px and 8px.
+
+### Mobile Grid & Viewport Adapters
+- **Margins**: Handheld outer edge margins are fixed at `1.25rem` (`20px`) for standard mobile screens (up to 430px wide), reducing to `1rem` (`16px`) on ultra-compact devices (under 375px wide).
+- **Safe Area Insets**: Dynamic padding-top accounts for status bars and dynamic islands (`min: 44px`), with bottom padding (`min: 34px`) reserved for home indicators, floating wave-action docks, and gesture panels.
+- **Spacing Rhythm**: Component padding within glass cards standardizes on `space-lg` (`24px`) to preserve internal negative space against backdrop blur elements. Micro-gaps between telemetry data points or droplet counters use `space-xs` (`8px`) or `space-sm` (`12px`).
+
+## Elevation & Depth
+
+Visual depth is achieved through optical refraction and physical light physics rather than flat dropshadows.
+
+### Optical Layer Hierarchy
+- **Base Canvas (Level 0)**: Midnight ocean gradient with slow-moving ambient radial gradients that subtly pulsate during drinking interactions.
+- **Resting Glass Surface (Level 1)**: Primary cards (e.g., historical chart panels, hydration logs). 
+  - Fill: `rgba(255, 255, 255, 0.08)`
+  - Filter: `backdrop-filter: blur(24px) saturate(180%)`
+  - Outline: `1px solid rgba(255, 255, 255, 0.2)`
+  - Shadow: `0 12px 32px -8px rgba(0, 0, 0, 0.4)`
+- **Floating Interactive Elements (Level 2)**: Quick-add droplet FABs, floating bottom navigation, and interactive progress widgets.
+  - Fill: `rgba(255, 255, 255, 0.16)`
+  - Filter: `backdrop-filter: blur(32px) saturate(200%)`
+  - Outline: `1px solid rgba(255, 255, 255, 0.35)`
+  - Shadow: `0 16px 40px -4px rgba(0, 0, 0, 0.5), 0 0 20px 2px rgba(0, 180, 216, 0.2)`
+- **Dynamic Glow Accents**: Key milestones and intake confirmations project a soft, atmospheric cyan aura using `box-shadow: 0 0 32px rgba(0, 180, 216, 0.45)`.
+
+## Shapes
+
+The shape system draws inspiration from surface tension, meniscus curves, and liquid beads. Sharp corners are avoided.
+
+- **Primary Cards & Containers**: Bound by a standard radius of `1.5rem` (`24px`) scaling to `2rem` (`32px`) for full-width hero widgets and summary containers.
+- **Interactive Quick-Add Buttons**: Full organic pill forms (`9999px`) or droplet teardrop squircles that evoke water droplets.
+- **Sliders & Progress Fill Caps**: Liquid stroke caps use circular and pill geometries to maintain smooth wave curvature across touch states.
+
+## Components
+
+### Buttons & Quick-Add FABs
+- **Primary Fluid Button**: High-viscosity pill shape (`height: 56px`), composed of a translucent gradient from `#00B4D8` to `#90E0EF` with `rgba(255,255,255,0.25)` top-inner shadow and `0 8px 24px rgba(0, 180, 216, 0.35)` glow. Active touch produces a rippling inward compress scale (`0.96`).
+- **Droplet Quick-Logs**: Rounded interactive circles (`64px x 64px`) displaying fixed volumes (`+250ml`, `+500ml`). Encased in Level 1 glass with an active glowing core.
+
+### Chips & Pill Toggles
+- **Fluid Selector Chips**: Height of `36px`, rounded to `9999px`. Resting state sits at `rgba(255, 255, 255, 0.06)` with a `1px` translucent border. Active selection triggers an intense oceanic glow with `#051322` text on a `#90E0EF` background.
+
+### Cards & Telemetry Containers
+- Built on `24px` to `32px` corner radii. Backed with `backdrop-filter: blur(24px)`. Internal padding is strictly `24px`. Subsections within cards are segmented by horizontal hairline separators made from soft gradient masks (`rgba(255,255,255,0.15)` fading to transparent at the edges).
+
+### Input Fields & Steppers
+- Input chambers sit recessed behind a dark glass overlay (`rgba(5, 19, 34, 0.6)`) with `16px` border radius, high-contrast cyan cursor, and active glowing boundary (`1px solid #00B4D8`).
+
+### Hydration Progress Indicator
+- Central viewport wave container: Concentric circles with layered SVG sine waves animating at offset frequencies. Wave crests feature an inner light-diffusion gradient and particle air-bubble accents.
+
+### Bottom Navigation Dock
+- Suspended island dock elevated `20px` above the bottom edge. Constructed with high-blur frosted glass (`32px`), pill contouring (`9999px`), and icon items that illuminate with droplet-shaped radiant indicators when selected.
