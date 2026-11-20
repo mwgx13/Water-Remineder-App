@@ -8,6 +8,7 @@ on:
 jobs:
   build-apk:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Checkout repository
@@ -20,12 +21,9 @@ jobs:
           java-version: '21'
 
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Accept Android SDK licenses and install SDK 36.1
-        run: |
-          yes | sdkmanager --licenses > /dev/null 2>&1 || true
-          sdkmanager "platform-tools" "platforms;android-36.1" "build-tools;36.0.0"
+        uses: android-actions/setup-android@v4
+        with:
+          packages: 'platform-tools platforms;android-36.1 build-tools;36.0.0'
 
       - name: Prepare debug keystore
         run: |
